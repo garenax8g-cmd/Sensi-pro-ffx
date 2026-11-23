@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Fire Sensi Pro</title>
+<meta name="theme-color" content="#0a0a0a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <div class="logo">⚡</div>
+    <h1>FREE FIRE <span>SENSI PRO</span></h1>
+    <p>Trouve une base de sensibilité adaptée à ton téléphone.</p>
+    <span class="badge">GAMING EDITION • ÉCHELLE 0–200</span>
+  </header>
+
+  <section class="card">
+    <h2><span class="num">1</span> Choisis ton téléphone</h2>
+
+    <label for="brand">Marque du téléphone</label>
+    <select id="brand"></select>
+
+    <label for="model">Modèle du téléphone</label>
+    <input id="model" list="models" placeholder="Ex : Galaxy A05" autocomplete="off">
+    <datalist id="models"></datalist>
+
+    <label for="power">Puissance du téléphone</label>
+    <select id="power">
+      <option value="low">Entrée de gamme / téléphone modeste</option>
+      <option value="mid" selected>Milieu de gamme</option>
+      <option value="high">Haut de gamme / gaming</option>
+    </select>
+
+    <label for="style">Style de jeu</label>
+    <select id="style">
+      <option value="rush" selected>Rush / combat rapproché</option>
+      <option value="head">Headshot / précision</option>
+      <option value="bal">Équilibré</option>
+    </select>
+
+    <p class="hint">Si ton modèle n'apparaît pas, écris son nom : le site créera une base de réglages.</p>
+    <button id="generate" class="btn">⚡ GÉNÉRER MA SENSI</button>
+  </section>
+
+  <section class="card" id="result" hidden>
+    <div class="row-head">
+      <h2><span class="num">2</span> Tes sensibilités</h2>
+      <span class="scale">● ÉCHELLE 0–200</span>
+    </div>
+    <p class="sub" id="sub"></p>
+    <div id="list"></div>
+    <p class="note">Ces valeurs sont des suggestions de départ, pas des réglages officiels ni une garantie de headshot. Ajuste-les selon ton écran, tes FPS et tes préférences dans le jeu.</p>
+    <div class="actions">
+      <button id="copy" class="btn">📋 COPIER LES SENSIBILITÉS</button>
+      <button id="reset" class="btn ghost">↺ RÉINITIALISER</button>
+    </div>
+  </section>
+</main>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
